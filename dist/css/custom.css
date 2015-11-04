@@ -135,12 +135,9 @@ footer.well {
 }
 
 .bigscreen-background {
-    background-image: url(../img/logo.png);
-    background-size: cover;
-    height: 750px;
-    width: 750px;
-
-    position: relative;
-
-    
+    background-image: url(../img/hardcoded_hehe.jpg);
+    background-size: contain;
+	background-repeat: no-repeat;
+    height: 700px;
+    width: 80%;
 }
