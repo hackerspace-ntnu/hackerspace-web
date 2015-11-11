@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="600">
-    <!-- every 10 minutes we refresh the whole shebang -->
+    <meta http-equiv="refresh" content="1800">
+    <!-- every 30 minutes we refresh the whole shebang -->
     <link rel="stylesheet" href="./../../dist/css/bootswatch.yeti.min.css"/>
     <link rel="stylesheet" href="./../../dist/css/carousel.css"/>
     <link rel="stylesheet" href="./../../dist/css/custom.css"/>
@@ -32,12 +32,18 @@
     </div>
 </header>
 
-<div class="bigscreen-background center-block">
-    
-</div>
+<div id="imgcontainer" class="bigscreen-background center-block"></div>
 
 <script src="./../../dist/js/jquery-1.11.0.min.js"></script>
 <script src="./../../dist/js/bootstrap.min.js"></script>
 <script src="./../../dist/js/doorstatus.js"></script>
+<script>
+(function() {
+	var items = ["./../../dist/img/hardcoded_hehe.jpg", "./../../dist/img/hvorgodevenner.jpg", "./../../dist/img/bigscreen-hardcode-print.jpg"];
+	var item = items[Math.floor(Math.random()*items.length)];
+	var imgcontainer=document.getElementById("imgcontainer");
+	imgcontainer.style.backgroundImage = 'url("'+item+'")';
+})();
+</script>
 </body>
 </html>
