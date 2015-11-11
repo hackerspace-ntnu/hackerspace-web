@@ -141,3 +141,20 @@ footer.well {
     height: 700px;
     width: 80%;
 }
+
+#infoh1 {
+	margin-left: 218px;
+}
+
+.container h1:before {
+    content: "";
+    background-image: url(../img/COGLIGHT.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 120px;
+    display: block;
+    position: absolute;
+    left: 870px;
+    top: 30px;
+}
