@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
-from articles.models import Article, Image, Thumbnail
+from articles.models import Article, Thumbnail
+from edit.models import ArticleEditForm
+from django import forms
 
 
 def index(request):
@@ -16,16 +17,15 @@ def index(request):
 
 def article(request, article_id):
     requested_article = Article.objects.get(pk=article_id)
-    try:
-        image_list = Image.objects.filter(article_id=article_id)
-    except Image.DoesNotExist:
-        image_list = None
-    if image_list:
-        return render(request, 'article.html', {
-            'article': requested_article,
-            'image_list': image_list
-        })
-    else:
-        return render(request, 'article.html', {
-            'article': requested_article
-        })
+    form = ArticleEditForm(initial={
+        'article_id': article_id,
+        'ingress_content': requested_article.ingress_content,
+        'main_content': requested_article.main_content
+    })
+    form.fields['article_id'].widget = forms.HiddenInput()
+    context = {
+        'article': requested_article,
+        'form': form,
+    }
+
+    return render(request, 'article.html', context)

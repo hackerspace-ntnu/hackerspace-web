@@ -6,7 +6,7 @@ from textboxes.models import Textbox
 
 
 def index(request):
-    event_list = Event.objects.order_by('-event_date')
+    event_list = Event.objects.order_by('-date')
     article_list = Article.objects.order_by('-pub_date')[:3]
     thumbnail_list = Thumbnail.objects.all()
     event_thumbnail_list = EventThumbnail.objects.all()
