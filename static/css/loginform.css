@@ -1,6 +1,6 @@
 #loginform {
     position: fixed;
-    top: 83px;
+    right: 30px;
     width: 300px;
     height: 200px;
     margin: 0 auto;
@@ -9,20 +9,18 @@
     border-radius: 3px;
     border: solid 3px #959186;
     border-top: 0;
-    border-right: 0;
-    z-index: 100000000;
 }
 .loginStill {
-    right: -302px;
+    top: -302px;
     animation: none;
 }
 .loginIn {
     animation: loginIn 0.5s ease-in-out;
-    right: -2px;
+    top: 83px;
 }
 .loginOut {
     animation: loginOut 0.5s ease-in-out;
-    right: -302px;
+    top: -117px;
 }
 .fieldWrapper {
     margin: 0 auto;
@@ -78,10 +76,10 @@
   100% {border-width: 3px;}
 }
 @keyframes loginIn {
-    0% {transform: translateX(300px);}
-    100% {transform: translateX(0);}
+    0% {transform: translateY(-200px);}
+    100% {transform: translateY(0);}
 }
 @keyframes loginOut {
-    0% {transform: translateX(-300px);}
-    100% {transform: translateX(0px;);}
+    0% {transform: translateY(200px);}
+    100% {transform: translateY(0;);}
 }
