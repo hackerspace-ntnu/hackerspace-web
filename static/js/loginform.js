@@ -6,10 +6,11 @@ $(function() {
         showLogin = !showLogin;
         $('#loginform').removeClass('loginStill');
         if (showLogin) {
+            clearTimeout(timeout);
             $('#loginform').removeClass('loginOut');
             $('#loginform').addClass('loginIn');
             $('#loginform').css('display', 'inline');
-            clearTimeout(timeout)
+            $("#loginform [name='username']").focus();
         } else {
             $('#loginform').removeClass('loginIn');
             $('#loginform').addClass('loginOut');
