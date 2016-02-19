@@ -36,6 +36,7 @@
     padding: 3px;
     width: 100%;
     border-radius: 1px;
+    outline: 0;
 }
 .button {
   font-size: 18px;
