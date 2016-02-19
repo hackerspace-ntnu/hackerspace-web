@@ -27,6 +27,7 @@ INSTALLED_APPS = (
     'edit',
     'ckeditor',
     'ckeditor_uploader',
+    'login',
 )
 
 MIDDLEWARE_CLASSES = (
