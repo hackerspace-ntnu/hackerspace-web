@@ -9,6 +9,7 @@
     border-radius: 3px;
     border: solid 3px #959186;
     border-top: 0;
+    z-index: 10;
 }
 .loginStill {
     top: -302px;
