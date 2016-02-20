@@ -1,0 +1,8 @@
+<form action="/edit/article/" method="post">
+        {% csrf_token %}
+        <div id="the_post">
+            {{ form.media }}
+            {{ form.as_p }}
+        </div>
+        <input type="submit" value="Save" />
+ </form>

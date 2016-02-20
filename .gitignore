@@ -3,6 +3,8 @@
 *.save
 *.saved
 .idea/
-
 local_settings.py
 *.sqlite3
+migrations/
+__pycache__/
+*.pyc

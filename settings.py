@@ -24,6 +24,10 @@ INSTALLED_APPS = (
     'articles',
     'textboxes',
     'events',
+    'edit',
+    'ckeditor',
+    'ckeditor_uploader',
+    'login',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,6 +89,9 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (os.path.join('static'),)
+
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 from local_settings import SECRET_KEY, DEBUG
 
