@@ -9,7 +9,7 @@
     border-radius: 3px;
     border: solid 3px #959186;
     border-top: 0;
-    z-index: 10;
+    z-index: 1000;
 }
 .loginStill {
     top: -302px;
@@ -82,5 +82,5 @@
 }
 @keyframes loginOut {
     0% {transform: translateY(200px);}
-    100% {transform: translateY(0;);}
+    100% {transform: translateY(0);}
 }

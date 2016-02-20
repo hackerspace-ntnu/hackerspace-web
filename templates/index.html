@@ -1,4 +1,5 @@
 {% include 'base.html' %}
+{% load staticfiles %}
 
 <section id="intro" class="intro-section">
     <div class="container">
@@ -17,6 +18,22 @@
         </div>
     </div>
 </section>
+
+
+
+<style>
+    #login {
+        padding-top: 84px;
+        background-image: url({% static "img/noise_beige.png" %});
+        width: 100%;
+    }
+</style>
+
+<section id="login">
+    {% include "login.html" %}
+</section>
+
+
 
 <section id="readmore" class="readmore-section">
     <a id="scrolldown" class="label page-scroll" href="index.html#about">Hva er Hackerspace NTNU? Klikk her eller scoll
