@@ -52,6 +52,36 @@
     {% endautoescape %}
 </div>
 
+<div style="height: 100px;"></div>
+<div style="
+      width:600px;
+      margin-left:auto;
+      margin-right:auto;
+      padding-top:50px;
+      margin-top:0px;
+      min-height:400px;
+  ">
+    {% if image_list %}
+    {% for image in image_list.all %}
+    <img style="margin:10px;
+                float:{{ image.image_float}};
+                margin-top:30px;"
+         src="{{ image.image_src }}"
+            {% if image.image_customDimensions %}
+            height="{{ image.image_height }}"
+            width="{{ image.image_width }}"
+            {% endif %}
+            >
+    {% endfor %}
+    {% endif %}
+    <h1 style="
+          font-size:{{ article.header_fontsize }}px;
+          color:{{ article.header_color }};
+          font-family:{{ article.header_fontfamily }};
+      ">
+        {{ article.header_text }}
+    </h1>
+
 <div id="edit" style="display: none;">
   <div style="
         width:800px;
