@@ -1,6 +1,6 @@
 # Hackerspace Website
 
-The code running [hackerspace.idi.ntnu.no](http://hackerspace.idi.ntnu.no).
+The old website for Hackerspace NTNU
 
 ## Getting started developing
 
